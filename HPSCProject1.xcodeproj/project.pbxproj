@@ -35,7 +35,6 @@
 		27C999A31D77A3590064D352 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector.h; path = lib/Vector.h; sourceTree = "<group>"; };
 		27C999A71D77A36D0064D352 /* proj1_a.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = proj1_a.cpp; path = src/proj1_a.cpp; sourceTree = "<group>"; };
 		27C999A81D77A36D0064D352 /* nest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = nest.cpp; path = src/nest.cpp; sourceTree = "<group>"; };
-		27E670D81D786B2A0090E8F1 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +51,6 @@
 		27C999881D77A26E0064D352 = {
 			isa = PBXGroup;
 			children = (
-				27E670D81D786B2A0090E8F1 /* .gitignore */,
 				27C999AB1D77A3830064D352 /* src */,
 				27C999A61D77A35D0064D352 /* lib */,
 				27C999921D77A26E0064D352 /* Products */,
