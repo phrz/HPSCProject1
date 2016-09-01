@@ -60,35 +60,38 @@ int main(int argc, const char * argv[]) {
 		   p8(z.size()),
 		   p12(z.size());
 	
-	// group up the coefficient row matrices with the
-	// corresponding result storage vectors
-	std::pair<Matrix*,Vector*> pairs[3] = {
-		{&c4,&p4},
-		{&c8,&p8},
-		{&c12,&p12}
-	};
-	
-	// calculate p4 over all x in z (series length 4),
-	// ibid. for p8 (series length 8)
-	// & finally p12 (series length 12)
-	for(auto pair: pairs) {
-		Matrix* coefficients = pair.first;
-		Vector* results = pair.second;
-		
-		// for each x value in the linspace,
-		// calculate p?(x), where ? iterates 4, 8, 12.
-		for(Index i = 0; i < z.size(); ++i) {
-			double x = z(i);
-			(*results)[i] = nest(*coefficients, x);
-		}
+	// for each x value in the linspace,
+	// calculate p?(x), where ? iterates 4, 8, 12.
+	for(Index i = 0; i < z.size(); ++i) {
+		double x = z(i);
+		p4[i] = nest(c4, x);
+		p8[i] = nest(c4, x);
+		p12[i] = nest(c4, x);
 	}
 	
 	// compute vector f by evaluating e^x at all x in z.
 	Vector f = z.row(0);
 	f = M_E ^ f;
-	std::cout << f << std::endl;
 	
+	// compute the vector err4 as |e^x − p4(x)| for each x ∈ z.
+	Vector err4 = f - p4;
+	err4.mapElements([&](double& x, Index i) { x = std::abs(x); });
 	
+	// compute the vector err8 as |e^x − p8(x)| for each x ∈ z.
+	Vector err8 = f - p8;
+	err8.mapElements([&](double& x, Index i) { x = std::abs(x); });
+	
+	// compute the vector err12 as |e^x − p12(x)| for each x ∈ z.
+	Vector err12 = f - p12;
+	err12.mapElements([&](double& x, Index i) { x = std::abs(x); });
+	
+	// Save the vectors z, p4, p8, p12, f, err4, err8 and err12
+	// to unique text files named z.txt, p4.txt, p8.txt, p12.txt,
+	// f.txt, err4.txt, err8.txt and err12.txt, respectively.
+	
+	std::cout << "err4 =\n" << err4 << "\n\n";
+	std::cout << "err8 =\n" << err8 << "\n\n";
+	std::cout << "err12 =\n" << err12 << "\n\n";
 	
     return 0;
 }
