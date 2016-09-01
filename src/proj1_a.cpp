@@ -65,8 +65,8 @@ int main(int argc, const char * argv[]) {
 	for(Index i = 0; i < z.size(); ++i) {
 		double x = z(i);
 		p4[i] = nest(c4, x);
-		p8[i] = nest(c4, x);
-		p12[i] = nest(c4, x);
+		p8[i] = nest(c8, x);
+		p12[i] = nest(c12, x);
 	}
 	
 	// compute vector f by evaluating e^x at all x in z.
@@ -89,9 +89,6 @@ int main(int argc, const char * argv[]) {
 	// to unique text files named z.txt, p4.txt, p8.txt, p12.txt,
 	// f.txt, err4.txt, err8.txt and err12.txt, respectively.
 	
-	std::cout << "err4 =\n" << err4 << "\n\n";
-	std::cout << "err8 =\n" << err8 << "\n\n";
-	std::cout << "err12 =\n" << err12 << "\n\n";
 	
     return 0;
 }
