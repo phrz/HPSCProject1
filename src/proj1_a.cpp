@@ -88,14 +88,14 @@ int main(int argc, const char * argv[]) {
 	// Save the vectors z, p4, p8, p12, f, err4, err8 and err12
 	// to unique text files named z.txt, p4.txt, p8.txt, p12.txt,
 	// f.txt, err4.txt, err8.txt and err12.txt, respectively.
-	z.saveTo("z.txt");
-	p4.saveTo("p4.txt");
-	p8.saveTo("p8.txt");
-	p12.saveTo("p12.txt");
-	f.saveTo("f.txt");
-	err4.saveTo("err4.txt");
-	err8.saveTo("err8.txt");
-	err12.saveTo("err12.txt");
+	z.saveTo("../data/z.txt");
+	p4.saveTo("../data/p4.txt");
+	p8.saveTo("../data/p8.txt");
+	p12.saveTo("../data/p12.txt");
+	f.saveTo("../data/f.txt");
+	err4.saveTo("../data/err4.txt");
+	err8.saveTo("../data/err8.txt");
+	err12.saveTo("../data/err12.txt");
 	
     return 0;
 }

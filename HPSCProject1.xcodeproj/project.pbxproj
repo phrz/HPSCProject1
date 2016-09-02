@@ -35,6 +35,7 @@
 		27C999A31D77A3590064D352 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector.h; path = lib/Vector.h; sourceTree = "<group>"; };
 		27C999A71D77A36D0064D352 /* proj1_a.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = proj1_a.cpp; path = src/proj1_a.cpp; sourceTree = "<group>"; };
 		27C999A81D77A36D0064D352 /* nest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = nest.cpp; path = src/nest.cpp; sourceTree = "<group>"; };
+		27E670F91D78D8990090E8F1 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +52,7 @@
 		27C999881D77A26E0064D352 = {
 			isa = PBXGroup;
 			children = (
+				27E670F91D78D8990090E8F1 /* Makefile */,
 				27C999AB1D77A3830064D352 /* src */,
 				27C999A61D77A35D0064D352 /* lib */,
 				27C999921D77A26E0064D352 /* Products */,
@@ -90,6 +92,23 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXLegacyTarget section */
+		27E670F51D78D5A70090E8F1 /* Build with Make */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "";
+			buildConfigurationList = 27E670F61D78D5A70090E8F1 /* Build configuration list for PBXLegacyTarget "Build with Make" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "~/Documents/github/HPSCProject1";
+			dependencies = (
+			);
+			name = "Build with Make";
+			passBuildSettingsInEnvironment = 0;
+			productName = "Build with Make";
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		27C999901D77A26E0064D352 /* HPSCProject1 */ = {
 			isa = PBXNativeTarget;
@@ -122,6 +141,11 @@
 						DevelopmentTeam = M8MME6Q9DA;
 						ProvisioningStyle = Automatic;
 					};
+					27E670F51D78D5A70090E8F1 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = M8MME6Q9DA;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 27C9998C1D77A26E0064D352 /* Build configuration list for PBXProject "HPSCProject1" */;
@@ -137,6 +161,7 @@
 			projectRoot = "";
 			targets = (
 				27C999901D77A26E0064D352 /* HPSCProject1 */,
+				27E670F51D78D5A70090E8F1 /* Build with Make */,
 			);
 		};
 /* End PBXProject section */
@@ -258,6 +283,31 @@
 			};
 			name = Release;
 		};
+		27E670F71D78D5A70090E8F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = M8MME6Q9DA;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		27E670F81D78D5A70090E8F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = M8MME6Q9DA;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -278,6 +328,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		27E670F61D78D5A70090E8F1 /* Build configuration list for PBXLegacyTarget "Build with Make" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27E670F71D78D5A70090E8F1 /* Debug */,
+				27E670F81D78D5A70090E8F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
