@@ -7,12 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		275051CD1D7BC20E00AD1FB5 /* proj1_b.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 273427A81D7BBD6F00A82CFD /* proj1_b.cpp */; };
+		275051CE1D7BC20E00AD1FB5 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27C9999D1D77A3590064D352 /* Matrix.cpp */; };
+		275051CF1D7BC20E00AD1FB5 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27C999A21D77A3590064D352 /* Vector.cpp */; };
 		27C999A41D77A3590064D352 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27C9999D1D77A3590064D352 /* Matrix.cpp */; };
 		27C999A51D77A3590064D352 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27C999A21D77A3590064D352 /* Vector.cpp */; };
 		27C999A91D77A36D0064D352 /* proj1_a.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27C999A71D77A36D0064D352 /* proj1_a.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		275051C41D7BC1EB00AD1FB5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		27C9998F1D77A26E0064D352 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -25,7 +37,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		27C999911D77A26E0064D352 /* HPSCProject1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HPSCProject1; sourceTree = BUILT_PRODUCTS_DIR; };
+		273427A81D7BBD6F00A82CFD /* proj1_b.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = proj1_b.cpp; path = src/proj1_b.cpp; sourceTree = "<group>"; };
+		275051C61D7BC1EB00AD1FB5 /* HPSCProject1_b */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HPSCProject1_b; sourceTree = BUILT_PRODUCTS_DIR; };
+		27C999911D77A26E0064D352 /* HPSCProject1_a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HPSCProject1_a; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C9999D1D77A3590064D352 /* Matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Matrix.cpp; path = lib/Matrix.cpp; sourceTree = "<group>"; };
 		27C9999E1D77A3590064D352 /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Matrix.h; path = lib/Matrix.h; sourceTree = "<group>"; };
 		27C9999F1D77A3590064D352 /* NotImplementedException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotImplementedException.h; path = lib/NotImplementedException.h; sourceTree = "<group>"; };
@@ -39,6 +53,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		275051C31D7BC1EB00AD1FB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27C9998E1D77A26E0064D352 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,7 +83,8 @@
 		27C999921D77A26E0064D352 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				27C999911D77A26E0064D352 /* HPSCProject1 */,
+				27C999911D77A26E0064D352 /* HPSCProject1_a */,
+				275051C61D7BC1EB00AD1FB5 /* HPSCProject1_b */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +108,7 @@
 			children = (
 				27C999A71D77A36D0064D352 /* proj1_a.cpp */,
 				27C999A81D77A36D0064D352 /* nest.cpp */,
+				273427A81D7BBD6F00A82CFD /* proj1_b.cpp */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -93,26 +116,57 @@
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		27E670F51D78D5A70090E8F1 /* Build with Make */ = {
+		273427A91D7BC11B00A82CFD /* Make 1b */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "";
-			buildConfigurationList = 27E670F61D78D5A70090E8F1 /* Build configuration list for PBXLegacyTarget "Build with Make" */;
+			buildArgumentsString = HPSCProject1_b;
+			buildConfigurationList = 273427AA1D7BC11B00A82CFD /* Build configuration list for PBXLegacyTarget "Make 1b" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
 			buildWorkingDirectory = "~/Documents/github/HPSCProject1";
 			dependencies = (
 			);
-			name = "Build with Make";
+			name = "Make 1b";
+			passBuildSettingsInEnvironment = 0;
+			productName = "Build with Make";
+		};
+		27E670F51D78D5A70090E8F1 /* Make 1a */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = HPSCProject1_a;
+			buildConfigurationList = 27E670F61D78D5A70090E8F1 /* Build configuration list for PBXLegacyTarget "Make 1a" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "~/Documents/github/HPSCProject1";
+			dependencies = (
+			);
+			name = "Make 1a";
 			passBuildSettingsInEnvironment = 0;
 			productName = "Build with Make";
 		};
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
-		27C999901D77A26E0064D352 /* HPSCProject1 */ = {
+		275051C51D7BC1EB00AD1FB5 /* HPSCProject1_b */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27C999981D77A26E0064D352 /* Build configuration list for PBXNativeTarget "HPSCProject1" */;
+			buildConfigurationList = 275051CA1D7BC1EB00AD1FB5 /* Build configuration list for PBXNativeTarget "HPSCProject1_b" */;
+			buildPhases = (
+				275051C21D7BC1EB00AD1FB5 /* Sources */,
+				275051C31D7BC1EB00AD1FB5 /* Frameworks */,
+				275051C41D7BC1EB00AD1FB5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HPSCProject1_b;
+			productName = HPSCProject1_b;
+			productReference = 275051C61D7BC1EB00AD1FB5 /* HPSCProject1_b */;
+			productType = "com.apple.product-type.tool";
+		};
+		27C999901D77A26E0064D352 /* HPSCProject1_a */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27C999981D77A26E0064D352 /* Build configuration list for PBXNativeTarget "HPSCProject1_a" */;
 			buildPhases = (
 				27C9998D1D77A26E0064D352 /* Sources */,
 				27C9998E1D77A26E0064D352 /* Frameworks */,
@@ -122,9 +176,9 @@
 			);
 			dependencies = (
 			);
-			name = HPSCProject1;
+			name = HPSCProject1_a;
 			productName = HPSCProject1;
-			productReference = 27C999911D77A26E0064D352 /* HPSCProject1 */;
+			productReference = 27C999911D77A26E0064D352 /* HPSCProject1_a */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -136,6 +190,14 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Paul Herz";
 				TargetAttributes = {
+					273427A91D7BC11B00A82CFD = {
+						DevelopmentTeam = M8MME6Q9DA;
+					};
+					275051C51D7BC1EB00AD1FB5 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = M8MME6Q9DA;
+						ProvisioningStyle = Automatic;
+					};
 					27C999901D77A26E0064D352 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = M8MME6Q9DA;
@@ -160,13 +222,25 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				27C999901D77A26E0064D352 /* HPSCProject1 */,
-				27E670F51D78D5A70090E8F1 /* Build with Make */,
+				27C999901D77A26E0064D352 /* HPSCProject1_a */,
+				275051C51D7BC1EB00AD1FB5 /* HPSCProject1_b */,
+				27E670F51D78D5A70090E8F1 /* Make 1a */,
+				273427A91D7BC11B00A82CFD /* Make 1b */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		275051C21D7BC1EB00AD1FB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275051CD1D7BC20E00AD1FB5 /* proj1_b.cpp in Sources */,
+				275051CE1D7BC20E00AD1FB5 /* Matrix.cpp in Sources */,
+				275051CF1D7BC20E00AD1FB5 /* Vector.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27C9998D1D77A26E0064D352 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -180,6 +254,47 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		273427AB1D7BC11B00A82CFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = M8MME6Q9DA;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		273427AC1D7BC11B00A82CFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = M8MME6Q9DA;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		275051CB1D7BC1EB00AD1FB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = M8MME6Q9DA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		275051CC1D7BC1EB00AD1FB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = M8MME6Q9DA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		27C999961D77A26E0064D352 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -311,6 +426,23 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		273427AA1D7BC11B00A82CFD /* Build configuration list for PBXLegacyTarget "Make 1b" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				273427AB1D7BC11B00A82CFD /* Debug */,
+				273427AC1D7BC11B00A82CFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		275051CA1D7BC1EB00AD1FB5 /* Build configuration list for PBXNativeTarget "HPSCProject1_b" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				275051CB1D7BC1EB00AD1FB5 /* Debug */,
+				275051CC1D7BC1EB00AD1FB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		27C9998C1D77A26E0064D352 /* Build configuration list for PBXProject "HPSCProject1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -320,7 +452,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27C999981D77A26E0064D352 /* Build configuration list for PBXNativeTarget "HPSCProject1" */ = {
+		27C999981D77A26E0064D352 /* Build configuration list for PBXNativeTarget "HPSCProject1_a" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27C999991D77A26E0064D352 /* Debug */,
@@ -329,13 +461,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27E670F61D78D5A70090E8F1 /* Build configuration list for PBXLegacyTarget "Build with Make" */ = {
+		27E670F61D78D5A70090E8F1 /* Build configuration list for PBXLegacyTarget "Make 1a" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27E670F71D78D5A70090E8F1 /* Debug */,
 				27E670F81D78D5A70090E8F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
