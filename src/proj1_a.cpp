@@ -70,7 +70,7 @@ int main(int argc, const char * argv[]) {
 	}
 	
 	// compute vector f by evaluating e^x at all x in z.
-	Vector f = z.row(0);
+	Vector f = z.copyRow(0);
 	f = M_E ^ f;
 	
 	// compute the vector err4 as |e^x − p4(x)| for each x ∈ z.
