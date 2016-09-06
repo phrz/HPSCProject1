@@ -15,19 +15,38 @@ namespace PH {
 		_data = Raw1DArray(0);
 	}
 	
+	
 	Vector::Vector(Index n) {
 		_data = Raw1DArray(n);
 	}
+	
 	
 	Vector::Vector(Index n, MathNumber fill) {
 		_data = Raw1DArray(n,fill);
 	}
 	
+	
 	Vector::Vector(Raw1DArray data) {
 		_data = data;
 	}
 	
+	
 	Vector::Vector(std::initializer_list<double> l): _data(l) {}
+	
+	
+	Vector Vector::random(Index size) {
+		std::random_device randomDevice;
+		std::mt19937 generator(randomDevice());
+		std::uniform_real_distribution<> dist(0, 1);
+		
+		Vector result(size);
+		result.mapElements([&dist, &generator](MathNumber& element, Index i){
+			element = dist(generator);
+		});
+		
+		return result;
+	}
+	
 	
 	// create a new vector of linearly spaced data
 	Vector Vector::linSpace(MathNumber a, MathNumber b, Index n) {
@@ -379,6 +398,11 @@ namespace PH {
 		Vector result = vector1;
 		result *= vector2;
 		return result;
+	}
+	
+	// Result = Vector * -1
+	Vector operator-(const Vector& v) {
+		return v * -1;
 	}
 	
 	// Result = Vector / Constant
