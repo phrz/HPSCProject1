@@ -8,6 +8,7 @@ SRC = src/
 LIB = lib/
 BIN = bin/
 ROOT = $(shell pwd)
+DATA = data/
 
 AFILES = proj1_a.cpp
 BFILES = proj1_b.cpp
@@ -24,5 +25,10 @@ $(TARGETB):
 
 # make the data files
 
-data: $(TARGET)
-	cd $(BIN); ./$(TARGET)
+data_a: $(TARGETA)
+	cd $(BIN); ./$(TARGETA)
+
+clean:
+	rm ./$(DATA)*
+	rm ./$(BIN)$(TARGETA)
+	rm ./$(BIN)$(TARGETB)
