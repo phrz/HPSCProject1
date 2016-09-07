@@ -126,7 +126,7 @@
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
-			buildWorkingDirectory = "~/Documents/github/HPSCProject1";
+			buildWorkingDirectory = .;
 			dependencies = (
 			);
 			name = "Make 1b";
@@ -140,7 +140,7 @@
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
-			buildWorkingDirectory = "~/Documents/github/HPSCProject1";
+			buildWorkingDirectory = .;
 			dependencies = (
 			);
 			name = "Make 1a";
