@@ -40,13 +40,8 @@ double f2(double x) {
 double forwardDifferenceEstimate(double a, double h) {
 	// for a sufficiently smooth function f(x), the F.D.E. of f'(a) is def.
 	// δ⁺f(a) = [f(a+h)-f(a)] / h
-	// ...
-	// δ⁺f(a) ≈ f'(a) + (f"(a)/2) * h
 	
-	auto f1a = f1(a);
-	auto f2a = f2(a);
-	
-	return f1a + (f2a / 2.0) * h;
+	return (f(a+h) - f(a)) / h;
 }
 
 
