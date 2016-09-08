@@ -52,12 +52,11 @@ double forwardDifferenceEstimate(double a, double h) {
 
 double relativeError(double a, double h) {
 	// relative DP approximation error δ⁺DP f ~ f'(a)
-	// r ≤ h |f"(a) / 2f'(a)| + 1/h |(f(a)*ϵ_DP) / f'(a)|
-	auto fa = f(a);
+	// r = |[f'(a)-δ⁺f(a)]/f'(a)|
 	auto f1a = f1(a);
-	auto f2a = f2(a);
+	auto fde = forwardDifferenceEstimate(a, h);
 	
-	return h * std::abs(f2a/(2*f1a)) + (1.0/h) * std::abs((fa * EDP) / f1a);
+	return std::abs((f1a-fde)/f1a);
 }
 
 

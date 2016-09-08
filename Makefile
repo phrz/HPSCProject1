@@ -29,6 +29,7 @@ data_a: $(TARGETA)
 	cd $(BIN); ./$(TARGETA)
 
 clean:
-	rm -f ./$(DATA)*
+	rm -f ./$(DATA)a/*
+	rm -f ./$(DATA)b/*
 	rm -f ./$(BIN)$(TARGETA)
 	rm -f ./$(BIN)$(TARGETB)
