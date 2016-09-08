@@ -108,13 +108,13 @@ int main(int argc, const char * argv[]) {
 		
 	}
 	
-	println("r =\n", r);
-	println("R =\n", R);
-	
 	// save n, h, r, and R as
 	// n.txt, h.txt, r.txt, and R.txt.
-	println("NOTE: I really don't think it ought to be that r == R");
-	println("this is where we would save to file");
+	std::string prefix = "../data/b/";
+	n.saveTo(prefix + "n.txt");
+	h.saveTo(prefix + "h.txt");
+	r.saveTo(prefix + "r.txt");
+	R.saveTo(prefix + "bigr.txt");
 	
 	return 0;
 }
