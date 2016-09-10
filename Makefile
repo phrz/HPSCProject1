@@ -1,5 +1,5 @@
 #
-#  proj1_b.cpp
+#  Makefile
 #  HPSCProject1
 #
 #  Created by Paul Herz on 9/3/16.
@@ -15,7 +15,7 @@ CFLAGS = -std=c++14
 SRC = src/
 LIB = lib/
 BIN = bin/
-ROOT = $(shell pwd)
+ROOT = $(shell pwd)/
 DATA = data/
 NB = notebooks/
 RP = reports/
