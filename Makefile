@@ -91,7 +91,6 @@ clean:
 	rm -f ./$(DATA)b/*
 	rm -f ./$(BIN)$(TARGETA)
 	rm -f ./$(BIN)$(TARGETB)
-	rm -f ./$(RP)*.pdf
 	rm -f ./$(NB)*.nbconvert.ipynb
 
 
