@@ -14,18 +14,19 @@
 
 using namespace PH;
 
-// generate n coefficients
+// generate n+1 coefficients
 // for Taylor polynomial for e^x.
 // 1/0!, 1/1!, 1/2!, etc. as a row matrix.
+// N.B. 4th degree T.P. has 5 coefficients 0th...4th
 Matrix eulerExponentialTaylorCoefficients(Index n) {
-	Matrix coefficients = Matrix(1, n);
+	Matrix coefficients = Matrix(1, n+1);
 	
 	// factorial accumulator, starts as 1!
 	int fact = 1;
 	
 	// for the number of coefficients required,
 	// calculate 1/i! and set it in the row matrix.
-	for(Index i = 0; i < n; ++i) {
+	for(Index i = 0; i < n+1; ++i) {
 		if(i != 0) {
 			fact *= i;
 		}
@@ -48,11 +49,11 @@ int main(int argc, const char * argv[]) {
 	// Taylor polynomial p4(x) for all points x ∈ z.
 	// (ibid. for p8, p12)
 	
-	// calculate 12 coefficients for p12 and truncate for the
+	// calculate 13 coefficients degrees 0...12 for p12 and truncate for the
 	// p8 and p4 calculation.
 	Matrix c12 = eulerExponentialTaylorCoefficients(12);
-	Matrix c8 = c12.range(0, 0, 0, 7);
-	Matrix c4 = c12.range(0, 0, 0, 3);
+	Matrix c8 = c12.range(0, 0, 0, 8);
+	Matrix c4 = c12.range(0, 0, 0, 4);
 	
 	// create the result vectors, each of which will hold
 	// p?(x) for all x in z.
